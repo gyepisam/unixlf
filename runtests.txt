@@ -1,0 +1,6 @@
+#!/bin/sh
+PROG=
+for f in t/*.in; do
+    t=${f%in}tmp
+    $PROG < $f > $t && cmp ${f%in}out $t && rm -f $t
+done
