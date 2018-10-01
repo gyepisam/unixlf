@@ -1,11 +1,3 @@
-/*
- * unixlines filters input to ensure unix line end conventions.
- * Text lines in unix end with the new line character (LF, \012).
- * Text lines on other platforms end with carriage return (CR, \015) or
- * CRLF (\015\012). Both are changed to new lines. However, escaped carriage
- * returns are not modified.
- */
-
 #include <stdio.h>
 
 enum states { START, ESCAPE, CR };
